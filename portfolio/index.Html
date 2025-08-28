@@ -110,6 +110,73 @@
       <h2>Contact</h2>
       <p>Email:</p>
       <p>Phone: 123-456-7890</p>
+      <form method="post">
+        <fieldset>
+          <legend>Project Details</legend>
+          <label for="work">type of work</label>
+          <select name="work" id="work" required>
+            <option value="" selected disabled>choose type of work</option>
+            <option value="web">Wedsite</option>
+            <option value="app">Web App</option>
+            <option value="bug">Bug Fix</option>
+            <option value="con">Consultation</option>
+          </select>
+
+          <label for="tech">Technologies involvd</label>
+          <input type="checkbox" id="tech1" name="tech1" value="HTML" />
+          <label for="tech1">HTML</label><br />
+          <input type="checkbox" id="tech2" name="tech2" value="css" />
+          <label for="tech2">CSS</label><br />
+          <input type="checkbox" id="tech3" name="tech3" value="JavaScript" />
+          <label for="tech3">JavaScript</label><br />
+          <input type="checkbox" id="tech4" name="tech4" value="Node.js" />
+          <label for="tech4">Node.js</label><br />
+
+          <label for="details">Project Details</label><br />
+          <textarea
+            id="details"
+            name="details"
+            rows="4"
+            cols="50"
+            placeholder="Provide a brief description of your project..."
+            required
+          >
+          </textarea>
+          <br />
+          <button type="submit">Submit</button>
+        </fieldset>
+
+        <fieldset>
+          <legend>Budget & Timeline</legend>
+          <label for="budget">Budget Range</label>
+          <input type="number" id="budget" placeholder="123456789sk" required />
+
+          <h3>urgency</h3>
+          <input type="radio" name="time" id="ASAP" value="ASAP" />
+          <label for="ASAP">ASAP</label>
+          <input
+            type="radio"
+            name="time"
+            id="Within 2 weeks"
+            value="Within 2 weeks"
+          />
+          <label for="Within 2 weeks">Within 2 weeks</label>
+          <input type="radio" name="time" id="Flexible" value="Flexible" />
+          <label for="Flexible">Flexible</label>
+        </fieldset>
+        <fieldset>
+          <legend>Your Information</legend>
+          <label for="fullname"> Fulll Name</label>
+          <input type="text" id="fullname" placeholder="jon dow" required />
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="jon@me.com" required />
+          <label for="CompanyOrOrganization">Company or Organization</label>
+          <input type="text" id="CompanyOrOrganization" />
+        </fieldset>
+        <label for="file">optional file or documents</label>
+        <input type="file" name="file" id="file" />
+        <button type="submit">Send Request</button>
+      </form>
     </section>
 
     <footer>
