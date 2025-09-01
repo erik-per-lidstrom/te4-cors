@@ -1,0 +1,22 @@
+:root {
+  --primary-color: #ffffff;
+  --backgraund-color: #153911;
+  --font-family: "Arial", sans-serif;
+  --card-padding: 1rem;
+  --border-radius: 8px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.card {
+  color: var(--primary-color);
+  background-color: var(--backgraund-color);
+  border-radius: var(--border-radius);
+  padding: var(--card-padding);
+  font-family: var(--font-family);
+}
