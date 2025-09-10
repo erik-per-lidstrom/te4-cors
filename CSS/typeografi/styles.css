@@ -1,0 +1,35 @@
+:root {
+  --font: "Roboto", sans-serif;
+  --heading-one: 1.5rem;
+  --font-standard: 1rem;
+}
+* {
+  /**/
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: var(--font);
+  line-height: 1.6;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font);
+  font-weight: bold;
+}
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.note {
+  font-style: italic;
+  letter-spacing: 1px;
+}
