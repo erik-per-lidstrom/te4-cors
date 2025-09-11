@@ -1,0 +1,64 @@
+:root {
+  --defalt-transison: cubic-bezier();
+}
+
+* {
+  /**/
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.box {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border: 2px solid black;
+  /*animation: spin 1s linear forwards infinite;*/
+}
+.loder {
+  margin: 20px auto;
+  border: 60px solid blue;
+  border-top: 60px solid purple;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  animation: spin 2s linear forwards infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bonse {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-30%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes bond {
+  0% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(30deg);
+  }
+  60% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

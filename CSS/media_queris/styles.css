@@ -1,0 +1,53 @@
+:root {
+  --bg: #ffffff;
+  --text: #030303;
+}
+html {
+  font-size: 16px;
+}
+
+* {
+  /**/
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--bg);
+}
+h1 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  text-align: center;
+  color: var(--text);
+}
+p {
+  font-size: clamp(1rem, 2vw, 1rem);
+  color: var(--text);
+  text-align: center;
+}
+.box {
+  width: clamp(20rem, 90vw, 69rem);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --text: #fefefe;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+}
+@media (hover: hover) and (ponter: fine) {
+}
