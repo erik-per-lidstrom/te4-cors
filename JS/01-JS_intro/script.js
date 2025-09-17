@@ -1,3 +1,5 @@
+"use strict";
+
 const xy = "i dont change";
 let xz = "i change";
 xz = "i changed";
