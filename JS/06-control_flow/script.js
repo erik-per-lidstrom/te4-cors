@@ -29,7 +29,7 @@ switch (color) {
 }
 
 let nuber = 3;
-let guess = 30;
+let guess = 10;
 
 if (nuber == guess) {
   console.log("corect");
@@ -39,6 +39,21 @@ if (nuber == guess) {
   console.log("to high");
 } else if (guess > 10) {
   console.log("invalid guess");
+} else {
+  console.log("somthing is wrong");
+}
+
+let mony_spent = 49;
+
+if (mony_spent >= 100) {
+  let final_prise = mony_spent * 0.8;
+  console.log(final_prise);
+} else if (mony_spent < 100 && mony_spent >= 50) {
+  let final_prise = mony_spent * 0.9;
+  console.log(final_prise);
+} else if (mony_spent < 50) {
+  let final_prise = mony_spent;
+  console.log(final_prise);
 } else {
   console.log("somthing is wrong");
 }
