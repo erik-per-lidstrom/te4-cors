@@ -57,3 +57,13 @@ if (mony_spent >= 100) {
 } else {
   console.log("somthing is wrong");
 }
+
+// bmi calculator
+
+const my_hight = 1.86;
+
+const my_weight = 75;
+
+const bmi = my_weight / my_hight ** 2;
+
+console.log(bmi);
