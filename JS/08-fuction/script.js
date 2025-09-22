@@ -46,7 +46,7 @@ const calculate_grade = function (name, score) {
     return `${name} got a D wth a scor of ${score}`;
   if (score < 60 && score >= 50)
     return `${name} got a E wth a scor of ${score}`;
-  if (score < 50 && score > 0) return `${name} got a F wth a scor of ${score}`;
+  if (score < 50 && score >= 0) return `${name} got a F wth a scor of ${score}`;
 };
 console.log(calculate_grade("JON", 100));
 console.log(calculate_grade("bob", 80));
