@@ -49,15 +49,19 @@ fechdata();
 //* B
 
 async function loadData(id) {
-  const [user, posts] = await Promise.all([
-    fetch(`https://jsonplaceholder.typicode.com/todos/${id}`).then((res) =>
-      res.json()
-    ),
-    fetch(`https://jsonplaceholder.typicode.com/posts?userid=${id}`).then(
-      (res) => res.json()
-    ),
-  ]);
-  console.log(user, posts);
+  try {
+    const [user, posts] = await Promise.all([
+      fetch(`https://jsonplaceholder.typicode.com/todos/${id}`).then((res) =>
+        res.json()
+      ),
+      fetch(`https://jsonplaceholder.typicode.com/posts?userid=${id}`).then(
+        (res) => res.json()
+      ),
+    ]);
+    console.log(user, posts);
+  } catch (error) {
+    console.error("Error somthing went wrong", error);
+  }
 }
 loadData(2);
 
@@ -85,15 +89,19 @@ fechdata2();
 //* C
 
 async function loadpost(id) {
-  const [comment, post] = await Promise.all([
-    fetch(`https://jsonplaceholder.typicode.com//comments?postId=${id}`).then(
-      (res) => res.json()
-    ),
-    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`).then((res) =>
-      res.json()
-    ),
-  ]);
-  console.log(post, comment);
+  try {
+    const [comment, post] = await Promise.all([
+      fetch(`https://jsonplaceholder.typicode.com//comments?postId=${id}`).then(
+        (res) => res.json()
+      ),
+      fetch(`https://jsonplaceholder.typicode.com/posts/${id}`).then((res) =>
+        res.json()
+      ),
+    ]);
+    console.log(post, comment);
+  } catch (error) {
+    console.error("Error somthing went wrong", error);
+  }
 }
 loadpost(2);
 
