@@ -86,6 +86,30 @@ async function fechdata2() {
 }
 fechdata2();
 
+async function fechWithRetry(url, optinos = {}, retries = 3, backOffMs = 500) {
+  let attempt = 0;
+  while (attempt <= retries) {
+    try {
+      const res = await fetch(url, optinos);
+      if (!res.ok) throw new Error(res.status);
+      return res;
+    } catch (error) {
+      if (attempt === retries) throw error;
+      await wait(backOffMs * (attempt + 1));
+      attempt++;
+    }
+  }
+}
+async function demoRetry() {
+  try {
+    const res = await fechWithRetry();
+    const data = await res.json();
+    console.log(data);
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+demoRetry();
 //* C
 
 async function loadpost(id) {
