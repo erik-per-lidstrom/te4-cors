@@ -1,8 +1,9 @@
 "use strict";
-
+const btn = document.querySelector("button");
 const quote = document.getElementById("quotes");
 const author = document.getElementById("author");
-async function getUsers() {
+btn.addEventListener("click", getQuotes);
+async function getQuotes() {
   try {
     const res = await fetch("http://api.quotable.io/random");
     if (!res.ok) throw new Error(res.status);
@@ -17,4 +18,4 @@ async function getUsers() {
     console.error("Error somthing went wrong", error);
   }
 }
-getUsers();
+getQuotes();

@@ -49,10 +49,9 @@ getposts();
 
 //! ex 1
 
-console.log("hello world");
-const studentJSON = '{"name":"Liam","grade":4,"passed":true}';
-const parsedJson2 = JSON.parse(studentJSON);
-console.log(parsedJson.name);
+const studentJSON2 = '{"name":"Liam","grade":4,"passed":true}';
+const parsedJson2 = JSON.parse(studentJSON2);
+console.log(parsedJson2.name);
 const jsonstring2 = JSON.stringify(parsedJson);
 
 //! e 2
