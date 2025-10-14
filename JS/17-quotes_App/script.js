@@ -3,6 +3,7 @@ const btn = document.querySelector("button");
 const quote = document.getElementById("quotes");
 const author = document.getElementById("author");
 btn.addEventListener("click", getQuotes);
+
 async function getQuotes() {
   try {
     const res = await fetch("http://api.quotable.io/random");
