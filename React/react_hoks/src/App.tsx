@@ -1,13 +1,11 @@
-import InputFocus from "./components/useRef/exampel_1";
-import Previos from "./components/useRef/exampel_3";
+import GretingCard from "./components/React_practice/greeting.card.component";
+
 function App() {
   return (
     <div className="">
       <h1>state in react</h1>
       <hr />
-      <Previos />
-      <hr />
-      <InputFocus />
+      <GretingCard />
     </div>
   );
 }
